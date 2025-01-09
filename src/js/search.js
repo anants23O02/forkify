@@ -2,9 +2,6 @@
 
 class search {
     searchElement = document.querySelector('.search');
-
-  
-
     getQueryfromInput(){
         const query = this.searchElement.querySelector('.search__field').value;
         return query;
