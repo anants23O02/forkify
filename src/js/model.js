@@ -1,6 +1,6 @@
 import * as values from './values.js';
 import resultView from './resultView.js';
-import pagination from './pagination.js';
+// import pagination from './pagination.js';
 let data;
 export const state = {
   search: {
@@ -45,17 +45,17 @@ function calculatePage(data) {
     }
     state.search.results.push(singlePageResults);
   }
-  console.log('singlePageResults :>> ', state.search.results);
+  // console.log('singlePageResults :>> ', state.search.results);
 }
 
-export const changePageNext = function () {
-  state.search.page += 1;
-  resultView.render(state.search.results[state.search.page - 1]);
-  console.log(state.search.page - 1, state.search.results.length);
-  pagination.renderPagination(state.search.page);
-};
-export const changePagePrev = function () {
-  state.search.page -= 1;
-  resultView.render(state.search.results[state.search.page - 1]);
-  pagination.renderPagination(state.search.page);
-};
+// export const changePageNext = function () {
+//   state.search.page += 1;
+//   resultView.render(state.search.results[state.search.page - 1]);
+//   console.log(state.search.page - 1, state.search.results.length);
+//   pagination.renderPagination(state.search.page);
+// };
+// export const changePagePrev = function () {
+//   state.search.page -= 1;
+//   resultView.render(state.search.results[state.search.page - 1]);
+//   pagination.renderPagination(state.search.page);
+// };

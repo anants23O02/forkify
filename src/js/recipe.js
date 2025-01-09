@@ -1,11 +1,16 @@
 class recipe {
     recipeContainer = document.querySelector('.recipe');
-    recipes = document.querySelector('.preview');
+    recipes = document.querySelector('.results');
 
-    handleRecipe() {
-        this.recipes.addEventListener('click', () => {
-            console.log('Recipe clicked!');
+    async handleRecipe() {
+        const recipe = await document.querySelectorAll('.preview');
+        await console.log(recipe);
+        recipe.forEach(currentRecipe => {            
+            currentRecipe.addEventListener('click',console.log(' :>> ' ))
         });
+        // this.recipes.addEventListener('click', () => {
+        //     console.log('Recipe clicked!');
+        // });
     }
 
     showRecipe() {
@@ -15,6 +20,3 @@ class recipe {
 
 export default new recipe();
 
-// this.recipes.forEach(currentRecipe => {            
-//     currentRecipe.addEventListener('click',console.log(' :>> ' ))
-// });
